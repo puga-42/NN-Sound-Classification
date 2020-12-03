@@ -15,6 +15,7 @@ import re
 from pytube import YouTube
 from moviepy.editor import *
 from sklearn.preprocessing import MultiLabelBinarizer
+import glob
 # import keras
 # from keras import layers
 # from keras import layers
@@ -96,8 +97,9 @@ def download_video(vid, folder):
     return os.path.basename(os.path.normpath("/Users/joshbernd/Desktop/gal_notes/Capstone/CNN-Instrument-Classification/mp4/" + str(vid)))
     
 
+
 def to_mp3(path, vid):
-    for file in [n for n in os.listdir(path) if re.search('mp4',n)]:
+    for file in [n for n in os.listdir(path)]:
         full_path = os.path.join(path, file)
         output_path = os.path.join("/Users/joshbernd/Desktop/gal_notes/Capstone/CNN-Instrument-Classification/mp3", 
                                     str(vid) + '.mp3')
@@ -105,6 +107,17 @@ def to_mp3(path, vid):
         clip.write_audiofile(output_path)
         os.remove(full_path)
         return output_path, full_path
+
+
+def cleanup():
+    files = glob.glob('/Users/joshbernd/Desktop/gal_notes/Capstone/CNN-Instrument-Classification/mp4/*')
+    for f in files:
+        os.remove(f)
+
+    files = glob.glob('/Users/joshbernd/Desktop/gal_notes/Capstone/CNN-Instrument-Classification/mp3/*')
+    for f in files:
+        os.remove(f)
+
 
 def make_feature_file():
     header = 'YTID chroma_stft rmse spectral_centroid spectral_bandwidth rolloff zero_crossing_rate'
