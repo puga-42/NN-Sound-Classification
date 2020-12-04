@@ -20,26 +20,25 @@ I used google's Audioset metatdata. A file containing video ids of 22,176 youtub
 ![alt text](img/linus_and_lucy.png "Title")
 
 
-5. Extract the following features from mel-spectrogram:
-  - Mel-frequency cepstral coefficients (MFCC)
+## Features extracted from mel-spectrogram:
+###     - Mel-frequency cepstral coefficients (MFCC)
   
-  - Spectral Centroid
+###     - Spectral Centroid
     - A measure of where a spectrum's center of mass is located. This measurement is used to quantify the 'brightness' of a sound.
     ![alt text](img/spectral_centroid.png "Title")
     
-  - Zero Crossing Rate
-    - 
+###     - Zero Crossing Rate
+    ![alt text](img/zcr.png "Title")
+
     
-  - Chroma Frequencies
+###     - Chroma Frequencies
     - Idendifies sounds that fall into distinced pitches. Large amounts of chroma features is a strong indicator for the presence of music.
      ![alt text](img/chroma_freq.png "Title")
      
     
-  - Spectral Roll-off
+###     - Spectral Roll-off
     - The frequency below which a certain percentage of the total spectral energy lies.
     ![alt text](img/spectral_rolloff.png "Title")
     
 
-## The Features
 
-### Mel-frequency cepstral coefficients (MFCC)
