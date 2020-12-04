@@ -5,7 +5,8 @@ Using CNNs to identify instruments in sound files
 
 
 # The Data
-I used google's Audioset metatdata. A file containing video ids of 22,176 youtube videos with a 10 second segment and up two 12 labels of sounds heard on that segment.
+I used google's Audioset metatdata. This metadata contians video ids of 22,176 YouTube videos with a specified 10 second 
+segment and at least one label of sound heard on that segment.
 
 
 ### Metatdata
@@ -23,11 +24,7 @@ Some of the labeled sounds don't actually appear in the video segments. I will c
 
 
 
-Relevant features of the data:
-    -
-
-
-## Feature Extraction Pipeline
+# Feature Extraction Pipeline
 
 1. Download audio data from youtube videos in the metadata
 2. Convert mp4 files to mp3
@@ -56,17 +53,23 @@ Relevant features of the data:
 
     
 ###     - Chroma Frequencies
-    - Idendifies sounds that fall into distinced pitches. Large amounts of chroma features is a strong indicator for the presence of music.
+    - Idendifies sounds that fall into distinced pitches. 
+    - Large amounts of chroma features is a strong indicator for the presence of music.
    ![alt text](img/chroma_freq.png "Title")
      
     
 ###     - Spectral Roll-off
-    - The frequency below which a certain percentage of the total spectral energy lies.
+    - The frequency below which a certain percentage of the total spectral energy lies. I've used 85% for this model.
+   
   ![alt text](img/spectral_rolloff.png "Title")
     
 
 ## Building the Neural Networks
-Need to get a more even split sample of speech and no speech/music and no music
+There are over 500 unique labels in the data. Instead of training a model to recognize all labels concurrently, 
+we'll train it to recognize the presence of certain unique sounds. 
+Here are two differnt models:
+    - One that identifies music
+    - One that identifies speech
 
 ### Recognizing the Presence of Music
 
