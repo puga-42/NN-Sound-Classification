@@ -8,15 +8,38 @@ Using CNNs to identify instruments in sound files
 I used google's Audioset metatdata. A file containing video ids of 22,176 youtube videos with a 10 second segment and up two 12 labels of sounds heard on that segment.
 
 
-## Pipeline for Feature Extraction
+### Metatdata
+The metadata consits of Youtube video ids 'YTID'
 
-1. download audio data from youtube video in metadata
-2. convert mp4 to mp3
-3. trim down to 10 second clip identified in metadata. Now we have this 10-second snippet of 'Linus and Lucy'
-4. Use the librosa library to generate mel-spectrogram
+![alt text](img/metadata.png "Title")
+
+### Class Labels
+![alt text](img/class_labels.png "Title")
+
+
+### Labeling Accuracy
+Some of the labeled sounds don't actually appear in the video segments. I will cut the data down to the sounds with labeling accuray >= 80%. This corresponds to class lables with a ratio over 0.8.
+![alt text](img/true_counts.png "Title")
+
+
+
+Relevant features of the data:
+    -
+
+
+## Feature Extraction Pipeline
+
+1. Download audio data from youtube videos in the metadata
+2. Convert mp4 files to mp3
+3. Trim mp3 file down to the 10 seconds indicated in the metadata.
+4. Use the librosa library to generate a mel-spectrogram and extract the features
     - explain what mel-spectrogram is
     - Mel(f) = 2596 log(1 + f/700)
     
+    
+## Let's visualize the feature extraction from a snippet of 'Linus and Lucy'
+- ipd.Audio(file_deb)
+
 ![alt text](img/linus_and_lucy.png "Title")
 
 
