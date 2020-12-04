@@ -25,7 +25,7 @@ I used google's Audioset metatdata. A file containing video ids of 22,176 youtub
   
 ###     - Spectral Centroid
     - A measure of where a spectrum's center of mass is located. This measurement is used to quantify the 'brightness' of a sound.
-    ![alt text](img/spectral_centroid.png "Title")
+  ![alt text](img/spectral_centroid.png "Title")
     
 ###     - Zero Crossing Rate
     ![alt text](img/zcr.png "Title")
@@ -33,12 +33,12 @@ I used google's Audioset metatdata. A file containing video ids of 22,176 youtub
     
 ###     - Chroma Frequencies
     - Idendifies sounds that fall into distinced pitches. Large amounts of chroma features is a strong indicator for the presence of music.
-     ![alt text](img/chroma_freq.png "Title")
+   ![alt text](img/chroma_freq.png "Title")
      
     
 ###     - Spectral Roll-off
     - The frequency below which a certain percentage of the total spectral energy lies.
-    ![alt text](img/spectral_rolloff.png "Title")
+  ![alt text](img/spectral_rolloff.png "Title")
     
 
 
