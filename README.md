@@ -44,23 +44,25 @@ Some of the labeled sounds don't actually appear in the video segments. I will c
 
 
 ## Features extracted from mel-spectrogram:
-###     - Mel-frequency cepstral coefficients (MFCC)
+###     Mel-frequency cepstral coefficients (MFCC)
   
-###     - Spectral Centroid
+###     Spectral Centroid
     - A measure of where a spectrum's center of mass is located. This measurement is used to quantify the 'brightness' of a sound.
   ![alt text](img/spectral_centroid.png "Title")
     
-###     - Zero Crossing Rate
-    ![alt text](img/zcr.png "Title")
+###     Zero Crossing Rate
+    - The rate at which the sound wave crosses the x-axis. This feature is important for
+        identifying voiced and unvoiced audio signals
+  ![alt text](img/zcr.png "Title")
 
     
-###     - Chroma Frequencies
+###     Chroma Frequencies
     - Idendifies sounds that fall into distinced pitches. 
     - Large amounts of chroma features is a strong indicator for the presence of music.
    ![alt text](img/chroma_freq.png "Title")
      
     
-###     - Spectral Roll-off
+###     Spectral Roll-off
     - The frequency below which a certain percentage of the total spectral energy lies. I've used 85% for this model.
    
   ![alt text](img/spectral_rolloff.png "Title")
