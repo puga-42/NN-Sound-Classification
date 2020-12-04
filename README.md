@@ -14,7 +14,7 @@ The metadata consits of Youtube video ids 'YTID'
 
 ![alt text](img/metadata.png "Title")
 
-### Class Labels
+### 'recorded_labels' are linked to this dataframe:
 ![alt text](img/class_labels.png "Title")
 
 
@@ -68,8 +68,9 @@ Some of the labeled sounds don't actually appear in the video segments. I will c
 There are over 500 unique labels in the data. Instead of training a model to recognize all labels concurrently, 
 we'll train it to recognize the presence of certain unique sounds. 
 Here are two differnt models:
-    - One that identifies music
-    - One that identifies speech
+
+- One that identifies music
+- One that identifies speech
 
 ### Recognizing the Presence of Music
 
