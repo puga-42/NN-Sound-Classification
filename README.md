@@ -35,6 +35,7 @@ Relevant features of the data:
 4. Use the librosa library to generate a mel-spectrogram and extract the features
     - explain what mel-spectrogram is
     - Mel(f) = 2596 log(1 + f/700)
+5. Append the list of features to the 'Features Dataframe'
     
     
 ## Let's visualize the feature extraction from a snippet of 'Linus and Lucy'
@@ -71,3 +72,9 @@ Need to get a more even split sample of speech and no speech/music and no music
 
               
 ### Recognizing the Presence of Speech
+
+
+## Neural Network Results
+It is terrible. 
+
+More data will need to be used to obtain more accurate results on a wider range of sounds.
