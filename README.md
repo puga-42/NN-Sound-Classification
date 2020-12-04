@@ -10,7 +10,7 @@ segment and at least one label of sound heard on that segment.
 
 
 ### Metatdata
-The metadata consits of Youtube video ids 'YTID'
+The metadata consits of Youtube video ids, the time interval of importance, and the sounds present in the time interval.
 
 ![alt text](img/metadata.png "Title")
 
@@ -19,7 +19,8 @@ The metadata consits of Youtube video ids 'YTID'
 
 
 ### Labeling Accuracy
-Some of the labeled sounds don't actually appear in the video segments. I will cut the data down to the sounds with labeling accuray >= 80%. This corresponds to class lables with a ratio over 0.8.
+Some of the labeled sounds don't actually appear in the video segments. I will cut the data down to the sounds with labeling accuray 
+>= 80%. This corresponds to class lables with a ratio over 0.8.
 ![alt text](img/true_counts.png "Title")
 
 
