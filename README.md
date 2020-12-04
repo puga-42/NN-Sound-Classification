@@ -45,9 +45,12 @@ Some of the labeled sounds don't actually appear in the video segments. I will c
 
 ## Features extracted from mel-spectrogram:
 ###     Mel-frequency cepstral coefficients (MFCC)
-  
+    - A series of 20 coefficients used to identify linguistic content and identify sound derived
+        from a human vocal tract.
+        
 ###     Spectral Centroid
-    - A measure of where a spectrum's center of mass is located. This measurement is used to quantify the 'brightness' of a sound.
+    - A measure of where a spectrum's center of mass is located. This measurement is 
+        used to quantify the 'brightness' of a sound.
   ![alt text](img/spectral_centroid.png "Title")
     
 ###     Zero Crossing Rate
@@ -80,14 +83,28 @@ For each model, we will train on the five features we extracted, and evaluate on
 
 An 80-20 train_test_split was used on the data to obtain 635 training data points and 159 testing data points.
 
+The neural network contains an input layer, three hidden layers and an output layer:
+- Input layer: 25 features
+- Hidden layer 1: 256 nodes, activation='relu'
+- Hidden layer 2: 128 nodes, activation='relu'
+- Hidden layer 3: 64 nodes, activation='relu'
+- Output layer: 2 nodes, activation='softmax'
+
+The network used a 'sparse_categorical_crossentropy' loss function and the 'adam' optimizer.
 
 
 
-## Neural Network Results
+## Neural Network Performance
 
 Terrible
 
+
+
 Here are confusion matrices visualized as a bar charts for speech and music recognition:
+
+  ![alt text](img/speech_id.png "Title")
+  ![alt text](img/music_id.png "Title")
+
 
 
 It looks like the models were proficient at classifying True Negatives, but its abysmal performance overall 
