@@ -41,4 +41,10 @@ I used google's Audioset metatdata. A file containing video ids of 22,176 youtub
   ![alt text](img/spectral_rolloff.png "Title")
     
 
+## Building the Neural Networks
+Need to get a more even split sample of speech and no speech/music and no music
 
+### Recognizing the Presence of Music
+
+              
+### Recognizing the Presence of Speech
