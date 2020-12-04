@@ -29,14 +29,16 @@ Some of the labeled sounds don't actually appear in the video segments. I will c
 1. Download audio data from youtube videos in the metadata
 2. Convert mp4 files to mp3
 3. Trim mp3 file down to the 10 seconds indicated in the metadata.
-4. Use the librosa library to generate a mel-spectrogram and extract the features
-    - explain what mel-spectrogram is
-    - Mel(f) = 2596 log(1 + f/700)
+4. Use the librosa library to generate a mel-spectrogram and extract the following features:
+    - Mel-frequency cepstral coefficients
+    - Spectral Centroid
+    - Zero Crossing Rate
+    - Chroma Frequencies
+    - Spectral Roll-off
 5. Append the list of features to the 'Features Dataframe'
     
     
 ## Let's visualize the feature extraction from a snippet of 'Linus and Lucy'
-- ipd.Audio(file_deb)
 
 ![alt text](img/linus_and_lucy.png "Title")
 
@@ -72,13 +74,27 @@ Here are two differnt models:
 - One that identifies music
 - One that identifies speech
 
-### Recognizing the Presence of Music
+For each model, we will train on the five features we extracted, and evaluate on whether or not speech or music was contained in that sample.
 
-              
-### Recognizing the Presence of Speech
+An 80-20 train_test_split was used on the data to obtain 635 training data points and 159 testing data points.
+
+
 
 
 ## Neural Network Results
-It is terrible. 
+
+Terrible
+
+Here are confusion matrices visualized as a bar charts for speech and music recognition:
+
+
+It looks like the models were proficient at classifying True Negatives, but its abysmal performance overall 
+indicates that this was due to there being more datapoints with label '0'
 
 More data will need to be used to obtain more accurate results on a wider range of sounds.
+
+
+## Next Steps
+ - Scale up the amount of data
+ - Train models on equal numbers of class labels '1' and '0'
+ - Train models on more classes and integrate together
