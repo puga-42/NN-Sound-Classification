@@ -1,5 +1,5 @@
-# CNN-Instrument-Classification
-Using CNNs to identify instruments in sound files
+# Neural Network Sound Classification
+Using neural networks to identify music and speech in audio files
 
 
 
