@@ -14,7 +14,8 @@ The metadata consits of Youtube video ids, the time interval of importance, and 
 
 ![alt text](img/metadata.png "Title")
 
-### 'recorded_labels' are linked to this dataframe:
+### Class Labels
+'recorded_labels' column in the metadata are linked to this dataframe:
 ![alt text](img/class_labels.png "Title")
 
 
