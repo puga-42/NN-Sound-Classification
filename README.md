@@ -56,7 +56,7 @@ labeling accuray >= 80%. This corresponds to class lables with a ratio over 0.8.
         used to quantify the 'brightness' of a sound.
   ![alt text](img/spectral_centroid.png "Title")
     
-###     Zero Crossing Rate
+###     Zero Crossing Rate (ZCR)
     - The rate at which the sound wave crosses the x-axis. This feature is important for
         identifying voiced and unvoiced audio signals
   ![alt text](img/zcr.png "Title")
@@ -87,8 +87,8 @@ For each model, we will train on the five features we extracted, and evaluate on
 An 80-20 train_test_split was used on the data to obtain 635 training data points and 159 testing data points.
 
 The neural network contains an input layer, three hidden layers and an output layer:
-- Input layer: 25 features
-- Hidden layer 1: 256 nodes, activation='relu'
+- Input layer: 25 features (21 MFCCs, Spectral Centroid, ZCR, Chroma Frequency, Spectral Roll-off)
+- Hidden layer 1: 128 nodes, activation='relu'
 - Hidden layer 2: 128 nodes, activation='relu'
 - Hidden layer 3: 64 nodes, activation='relu'
 - Output layer: 2 nodes, activation='softmax'
@@ -98,8 +98,6 @@ The network used a 'sparse_categorical_crossentropy' loss function and the 'adam
 
 
 ## Neural Network Performance
-
-Terrible
 
 
 
